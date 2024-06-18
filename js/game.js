@@ -6,7 +6,7 @@ const TMT_VERSION = {
 	tmtNum: "2.6.6.2",
 	tmtName: "Fixed Reality"
 }
-
+ 
 function getResetGain(layer, useType = null) {
 	let type = useType
 	if (!useType){ 

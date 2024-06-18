@@ -48,19 +48,19 @@ addLayer("p", {
         13: {
             title: "Timed Gaming",
             description: "Time in IP boosts points (t^2)",
-            cost: new Decimal("1e33"),
+            cost: new Decimal("1e84"),
             unlocked() {return true}
         },
         21: {
             title: "Formulae",
             description: "Boost INTerting Exponent based on points.",
-            cost: new Decimal("1e44"),
+            cost: new Decimal("1e120"),
             unlocked() {return true}
         },
         22: {
             title: "What. Active in Idle?",
-            description: "Times prestiged boosts points. (x^2)",
-            cost: new Decimal("1e60"),
+            description: "Points OoM boost points.",
+            cost: new Decimal("1e214"),
             unlocked() {return true}
         }
     },
