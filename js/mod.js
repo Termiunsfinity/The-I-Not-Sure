@@ -44,10 +44,14 @@ function getPointGen() {
 
 	let gain = new Decimal(1)
 	if (hasUpgrade("p",11)){
-		gain = gain.mul(Decimal(player.points).pow(0.99)) //wth am i doing why i think it not break eter???
+		gain = gain.mul(player.points.pow(0.99)) //wth am i doing why i think it not break eter???
 	}
 	if (hasUpgrade("p",12)){
-		gain = gain.mul(Decimal(player.p.points).log10())
+		let exp = new Decimal("1")
+		if (hasUpgrade("p",21)){
+			let exp = exp.mul(player.points.add(1).log10().pow(0.2))
+		}
+		gain = gain.mul(player.p.points.log10()).pow(exp)
 	}
 	if (hasUpgrade("p",13)){
 		gain = gain.mul(Decimal(player.p.resetTime).pow(2))
