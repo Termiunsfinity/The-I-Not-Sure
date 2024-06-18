@@ -49,7 +49,10 @@ function getPointGen() {
 	if (hasUpgrade("p",12)){
 		let exp = new Decimal("1")
 		if (hasUpgrade("p",21)){
-			exp = exp.mul(player.points.add(1).log10().pow(0.2))
+			exp = exp.mul(player.points.add(1).log10().add(1).log10().pow(0.2))
+			if (hasUpgrade("p",23)){
+				exp = exp.pow(new Decimal(player.p.resetTime).add(1).pow(0.05))
+			}
 		}
 		gain = gain.mul(player.p.points.log10()).pow(exp)
 	}
@@ -57,7 +60,7 @@ function getPointGen() {
 		gain = gain.mul(new Decimal(player.p.resetTime).pow(2))
 	}
 	if (hasUpgrade("p",22)){
-		gain = gain.mul(new Decimal(player.points).log10().pow(2))
+		gain = gain.mul(new Decimal(player.points).add(1).log10().pow(2))
 	}
 	gain = gain.add(player.p.points)
 	return gain

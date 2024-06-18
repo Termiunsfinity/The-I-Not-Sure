@@ -7,7 +7,7 @@ addLayer("p", {
     position: 0, // Horizontal position within a row. By default it uses the layer id and sorts in alphabetical order
     startData() { return {
         unlocked: true,
-		points: new Decimal(0),
+		points: new Decimal(1),
     }},
     color: "#FFDC13",
     requires: new Decimal(10),
@@ -60,7 +60,13 @@ addLayer("p", {
         22: {
             title: "What. Active in Idle?",
             description: "Points OoM boost points.",
-            cost: new Decimal("1e214"),
+            cost: new Decimal("1e214").pow(1.048576),
+            unlocked() {return true}
+        },
+        23: {
+            title: "Tell sombody to STOP INFLATION!!!",
+            description: "Time in this reset boostes U21.",
+            cost: new Decimal(2).pow(1024),
             unlocked() {return true}
         }
     },
