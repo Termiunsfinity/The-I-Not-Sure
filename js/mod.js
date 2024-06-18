@@ -56,6 +56,10 @@ function getPointGen() {
 	if (hasUpgrade("p",13)){
 		gain = gain.mul(Decimal(player.p.resetTime).pow(2))
 	}
+	if (hasUpgrade("p",22)){
+		gain = gain.mul(Decimal(player.p.times).pow(2))
+	}
+	gain = gain.add(player.p.points)
 	return gain
 }
 

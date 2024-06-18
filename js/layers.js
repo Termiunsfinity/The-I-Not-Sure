@@ -23,6 +23,10 @@ addLayer("p", {
     gainExp() { 
         return new Decimal(1)
     },
+    effectDescription(){
+        return "Which gives +" + format(player.p.points.add(1)) + " of base point/s."
+
+    },
     row: 0, 
     hotkeys: [
         {key: "i", description: "I for Idle Points", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
@@ -37,7 +41,7 @@ addLayer("p", {
         },
         12: {
             title: "INTerting",
-            description: "IP boostes Points very slightly.",
+            description: "IP boostes Points very slightly. (log(x))",
             cost: new Decimal("1e24"),
             unlocked() {return true}
         },
@@ -51,6 +55,12 @@ addLayer("p", {
             title: "Formulae",
             description: "Boost INTerting Exponent based on points.",
             cost: new Decimal("1e44"),
+            unlocked() {return true}
+        },
+        22: {
+            title: "What. Active in Idle?",
+            description: "Times prestiged boosts points. (x^2)",
+            cost: new Decimal("1e60"),
             unlocked() {return true}
         }
     },
