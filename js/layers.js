@@ -74,6 +74,12 @@ addLayer("p", {
             description: "Reapply U22 but 2x stronk",
             cost: new Decimal(2).pow(16451),
             unlocked() {return true}
+        },
+        32: {
+            title: "Your generic stuff #2",
+            description: "Reapply U22 but 4x stronk?",
+            cost: new Decimal(2).pow(16451),
+            unlocked() {return true}
         }
     },
 
