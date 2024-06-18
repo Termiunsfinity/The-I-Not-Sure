@@ -49,7 +49,7 @@ function getPointGen() {
 	if (hasUpgrade("p",12)){
 		let exp = new Decimal("1")
 		if (hasUpgrade("p",21)){
-			exp = exp.mul(player.points.add(1).log10().add(1).log10().pow(0.2))
+			exp = exp.mul(player.points.add(1).log10().add(1).log10().add(1).log10().pow(0.2)) //what the f*** i need tripple log
 			if (hasUpgrade("p",23)){
 				exp = exp.pow(new Decimal(player.p.resetTime).add(1).pow(0.05))
 			}
@@ -61,6 +61,9 @@ function getPointGen() {
 	}
 	if (hasUpgrade("p",22)){
 		gain = gain.mul(new Decimal(player.points).add(1).log10().pow(2))
+	}
+	if (hasUpgrade("p",31)){
+		gain = gain.mul(new Decimal(player.points).add(1).log10().pow(4))
 	}
 	gain = gain.add(player.p.points)
 	return gain
@@ -76,7 +79,7 @@ var displayThings = [
 
 // Determines when the game "ends"
 function isEndgame() {
-	return player.points.gte(new Decimal("ee128"))
+	return player.points.gte(new Decimal("ee1145141919810").tetrate(114514))
 }
 
 

@@ -68,6 +68,12 @@ addLayer("p", {
             description: "Time in this reset boostes U21.",
             cost: new Decimal(2).pow(1024),
             unlocked() {return true}
+        },
+        31: {
+            title: "Your generic stuff",
+            description: "Reapply U22 but 2x stronk",
+            cost: new Decimal(2).pow(2048),
+            unlocked() {return true}
         }
     },
 
