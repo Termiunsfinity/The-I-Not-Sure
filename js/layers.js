@@ -39,6 +39,12 @@ addLayer("p", {
             description: "IP boostes Points very slightly.",
             cost: new Decimal("1e24"),
             unlocked() {return true}
+        },
+        13: {
+            title: "Timed Gaming",
+            description: "Time in IP boosts points (t^2)",
+            cost: new Decimal("1e33"),
+            unlocked() {return true}
         }
     },
 
