@@ -49,7 +49,7 @@ function getPointGen() {
 	if (hasUpgrade("p",12)){
 		let exp = new Decimal("1")
 		if (hasUpgrade("p",21)){
-			exp = exp.mul(player.points.add(1).log10().add(1).log10().add(1).log10().pow(0.2)) //what the f*** i need tripple log
+			exp = exp.mul(player.points.add(1).log10().tetrate(0.5)) //looks like a cool idea, obviously not
 			if (hasUpgrade("p",23)){
 				exp = exp.pow(new Decimal(player.p.resetTime).add(1).pow(0.05))
 			}

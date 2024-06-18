@@ -60,22 +60,23 @@ addLayer("p", {
         22: {
             title: "What. Active in Idle?",
             description: "Points OoM boost points.",
-            cost: new Decimal("1e214").pow(1.048576),
+            cost: new Decimal("1e214").pow(10.48576),
             unlocked() {return true}
         },
         23: {
             title: "Tell sombody to STOP INFLATION!!!",
             description: "Time in this reset boostes U21.",
-            cost: new Decimal(2).pow(1024),
+            cost: new Decimal(2).pow(10241),
             unlocked() {return true}
         },
         31: {
             title: "Your generic stuff",
             description: "Reapply U22 but 2x stronk",
-            cost: new Decimal(2).pow(2048),
+            cost: new Decimal(2).pow(16451),
             unlocked() {return true}
         }
     },
 
     layerShown(){return true}
 })
+
