@@ -33,6 +33,12 @@ addLayer("p", {
             description: "Points boost itself at ^0.99.",
             cost: new Decimal("1"),
             unlocked() {return true}
+        },
+        12: {
+            title: "INTerting",
+            description: "IP boostes Points very slightly.",
+            cost: new Decimal("1e24"),
+            unlocked() {return true}
         }
     },
 
